@@ -4,12 +4,12 @@ import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
 
 const fetchData = (term, setData) =>{
   if (term===""){
-    fetch("https://api.unsplash.com/photos?page=1&client_id=oMW1J6GzeoLloNypwrkXUH-SzCIHwCIU2aqBXgNfdoU")
+    fetch("https://api.unsplash.com/photos?page=1&client_id=")
     .then(response => response.json())
     .then(response => {setData(response); console.log(response.results)})
   }
   else{
-    fetch(`https://api.unsplash.com/search/photos?&page=1&query=${term}&client_id=oMW1J6GzeoLloNypwrkXUH-SzCIHwCIU2aqBXgNfdoU`)
+    fetch(`https://api.unsplash.com/search/photos?&page=1&query=${term}&client_id=`)
     .then(response => response.json())
     .then(response => {setData(response.results); console.log(response.results)})
   }
